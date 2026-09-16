@@ -1,5 +1,5 @@
 import Greeting from "./components/Greeting";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 
 function App() {
   // logic
@@ -28,13 +28,15 @@ function App() {
       변경~!
 
       <Greeting />
-      <Greeting />
+      {/* <Greeting /> */}
 
       {/* 미션: Card 컴포넌트 만들고, 이 자리에 노출 */}
+      {/*
       <Card />
       <Card />
       <Card />
       <Card />
+      */}
     </div>
   );
 }
