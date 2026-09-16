@@ -11,6 +11,9 @@ const Greeting = () => {
 
     // 수정할 값을 인자로 넣어서 state 업데이트
     setUsername(window.prompt("성함이 어떻게 되시나요?"));
+
+    // state를 변경하는 것은 UI를 업데이트 하는 것이기 때문에 함수에 마지막에 실행됨 / 중복되는 set함수가 있으면 일단 건너띄고 최종적으로 마지막 거만 실행됨
+    console.log("🚀 ~ Greeting ~ username:", username);
   }
 
   // view
