@@ -22,6 +22,10 @@ function App() {
   console.log("🚀 ~ App ~ todoName:", todoName);
   console.log("🚀 ~ App ~ isComplete:", isComplete);
 
+  const handleButtonClick = (data) => {
+    console.log("Click!", data);
+  }
+
   // view
   return (
     <div className="App">
@@ -35,10 +39,15 @@ function App() {
 
       {/* 미션: Card 컴포넌트 만들고, 이 자리에 노출 */}
       <div style={{ "display": "flex", "gap": "1.5em" }}>
-        <Card imgUrl={"https://t3.ftcdn.net/jpg/02/74/06/48/360_F_274064877_Tuq84kGOn5nhyIJeUFTUSvXaSeedAOTT.jpg"} itemName={"웰시코기"} />
+        <Card
+          imgUrl={"https://t3.ftcdn.net/jpg/02/74/06/48/360_F_274064877_Tuq84kGOn5nhyIJeUFTUSvXaSeedAOTT.jpg"}
+          itemName={"웰시코기"}
+          onButtonClick={handleButtonClick} />
         {/* 미션: 남은 카드들 데이터 넘겨서 아이템 이미지 잘 보이게 하기 */}
-        <Card imgUrl={"https://t4.ftcdn.net/jpg/02/90/84/47/240_F_290844781_V4hoIL3E291xvY5nEL7NCaWIoCIQxHfI.jpg"} itemName={"골든 리트리버"} />
-        <Card imgUrl={"https://t3.ftcdn.net/jpg/01/65/27/74/240_F_165277412_kqhTmjJ5JAobrGBaeBppkPPnF33coEjP.jpg"} itemName={"잭 러셀 테리어"} />
+        <Card imgUrl={"https://t4.ftcdn.net/jpg/02/90/84/47/240_F_290844781_V4hoIL3E291xvY5nEL7NCaWIoCIQxHfI.jpg"} itemName={"골든 리트리버"}
+          onButtonClick={handleButtonClick} />
+        <Card imgUrl={"https://t3.ftcdn.net/jpg/01/65/27/74/240_F_165277412_kqhTmjJ5JAobrGBaeBppkPPnF33coEjP.jpg"} itemName={"잭 러셀 테리어"}
+          onButtonClick={handleButtonClick} />
       </div>
     </div>
   );
